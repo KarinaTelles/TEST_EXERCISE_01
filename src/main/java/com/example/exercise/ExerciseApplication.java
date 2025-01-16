@@ -1,6 +1,5 @@
 package com.example.exercise;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
@@ -21,7 +20,7 @@ public class ExerciseApplication {
 		/*##########################################*/
 		/*###############EXERCÍCIO 03###############*/
 		Faturamento exer3 = new Faturamento();
-		exer3.jsonReaderClass();
+		exer3.jsonReader();
 		/*##########################################*/
 	}
 

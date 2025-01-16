@@ -4,20 +4,26 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
+import java.util.ArrayList;
 
 public class Faturamento {
     /*Primeiro passo: Ler um arquivo JSON*/
-    public void jsonReaderClass() throws IOException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        JsonNode jsonNode = objectMapper.readTree(new File("src/main/java/com/example/exercise/dados.json"));
-        System.out.println(jsonNode);
-        System.out.println(jsonNode.size());
-        System.out.println(jsonNode.isArray());
-        System.out.println(jsonNode.get(1));
-        JsonNode a = jsonNode.get(1);
-        int dia = a.get("dia").asInt();
-        System.out.println(dia);
+    public void jsonReader() throws IOException {
+        ObjectMapper objectMapperSize = new ObjectMapper();
+        JsonNode jsonNodeSize = objectMapperSize.readTree(new File("src/main/java/com/example/exercise/dados.json"));
+        System.out.println("IMPRIME O JSON INTEIRO: " + jsonNodeSize);
+        System.out.println("IMPRIME O TAMANHO DO JSON: " + jsonNodeSize.size());
+        System.out.println("VERIFICA SE É UM ARRAY: " + jsonNodeSize.isArray());
+
+        for(int i = 0; i<jsonNodeSize.size()-1;i++){
+            ArrayList<Integer> list = new ArrayList<>();
+            ObjectMapper objectMapper = new ObjectMapper();
+            JsonNode jsonNode = objectMapper.readTree(new File("src/main/java/com/example/exercise/dados.json"));
+            JsonNode pegaJsonNode = jsonNode.get(i);
+            int dia = pegaJsonNode.get("dia").asInt();
+            list.add(dia);
+            System.out.println(list);
+        }
     }
 }
 /*
