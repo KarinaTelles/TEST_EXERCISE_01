@@ -7,6 +7,7 @@ public class Fibonacci {
         for(int valorAtual = 0; valorAtual<valorLimite; valorAtual++){
             System.out.print(doFibonacci(valorAtual) + " ");
         }
+        System.out.println("\n");
     }
     public int doFibonacci(int n){
         int a = 0; int b = 1; int aux = 0;

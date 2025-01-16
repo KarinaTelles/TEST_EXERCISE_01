@@ -3,10 +3,12 @@ package com.example.exercise;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.io.IOException;
+
 @SpringBootApplication
 public class ExerciseApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		/*###############EXERCÍCIO 01###############*/
 		Loop exer1 = new Loop();
 		int somaAoFinalDoLoop;
@@ -16,6 +18,10 @@ public class ExerciseApplication {
 		/*###############EXERCÍCIO 02###############*/
 		Fibonacci exer2 = new Fibonacci();
 		exer2.fibonacciSequence();
+		/*##########################################*/
+		/*###############EXERCÍCIO 03###############*/
+		Faturamento exer3 = new Faturamento();
+		exer3.jsonReaderClass();
 		/*##########################################*/
 	}
 
