@@ -4,7 +4,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Faturamento {
     /*Primeiro passo: Ler um arquivo JSON*/
@@ -14,16 +15,20 @@ public class Faturamento {
         System.out.println("IMPRIME O JSON INTEIRO: " + jsonNodeSize);
         System.out.println("IMPRIME O TAMANHO DO JSON: " + jsonNodeSize.size());
         System.out.println("VERIFICA SE É UM ARRAY: " + jsonNodeSize.isArray());
-
+        Map<Integer, Double> listaJsonToHashMap = jsonToHashMap(jsonNodeSize);
+        System.out.println(listaJsonToHashMap);
+    }
+    public Map<Integer, Double> jsonToHashMap(JsonNode jsonNodeSize)throws IOException{
+        Map<Integer, Double> mapa = new HashMap<>();
         for(int i = 0; i<jsonNodeSize.size()-1;i++){
-            ArrayList<Integer> list = new ArrayList<>();
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode jsonNode = objectMapper.readTree(new File("src/main/java/com/example/exercise/dados.json"));
             JsonNode pegaJsonNode = jsonNode.get(i);
             int dia = pegaJsonNode.get("dia").asInt();
-            list.add(dia);
-            System.out.println(list);
+            double valor = pegaJsonNode.get("valor").asDouble();
+            mapa.put(dia, valor);
         }
+        return mapa;
     }
 }
 /*
