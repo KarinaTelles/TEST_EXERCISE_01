@@ -17,6 +17,7 @@ public class Faturamento {
         System.out.println("VERIFICA SE É UM ARRAY: " + jsonNodeSize.isArray());
         Map<Integer, Double> listaJsonToHashMap = jsonToHashMap(jsonNodeSize);
         System.out.println(listaJsonToHashMap);
+        ordenaHashMap(listaJsonToHashMap);
     }
     public Map<Integer, Double> jsonToHashMap(JsonNode jsonNodeSize)throws IOException{
         Map<Integer, Double> mapa = new HashMap<>();
@@ -29,6 +30,12 @@ public class Faturamento {
             mapa.put(dia, valor);
         }
         return mapa;
+    }
+    public void ordenaHashMap(Map<Integer, Double> mapReceived){
+        Map.Entry<Integer, Double> maxPrice = null;
+        for(Map.Entry<Integer, Double> mapSort : mapReceived.entrySet()){
+//            if
+        }
     }
 }
 /*
