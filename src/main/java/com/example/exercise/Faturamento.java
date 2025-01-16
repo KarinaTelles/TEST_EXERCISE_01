@@ -1,6 +1,8 @@
 package com.example.exercise;
 
 public class Faturamento {
+    /*Primeiro passo: Ler um arquivo JSON*/
+
 }
 /*
 3) Dado um vetor que guarda o valor de faturamento diário
