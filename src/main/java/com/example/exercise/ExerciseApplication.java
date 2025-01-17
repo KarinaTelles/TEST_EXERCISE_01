@@ -26,6 +26,10 @@ public class ExerciseApplication {
 		FaturamentoPorEstado exer4 = new FaturamentoPorEstado();
 		exer4.faturamento();
 		/*##########################################*/
+		/*###############EXERCÍCIO 05###############*/
+		InverteString exer05 = new InverteString();
+		exer05.invertendoAString();
+		/*##########################################*/
 	}
 }
 
