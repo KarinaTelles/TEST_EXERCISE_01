@@ -1,12 +1,10 @@
-####Teste para empresa. 
-#####Utilizei Jackson Core para ler o JSON:
+Teste para empresa. 
+Utilizei Jackson Core para ler o JSON:
 
+*com.fasterxml.jackson.core
+*jackson-databind
+*2.18.2
 
-<dependency>
-<groupId>com.fasterxml.jackson.core</groupId>
-<artifactId>jackson-databind</artifactId>
-<version>2.18.2</version>
-</dependency>	
 
 
 
