@@ -30,6 +30,17 @@ public class Faturamento {
         for (Map.Entry<Integer, Double> entry : listaOrdenada) {
             System.out.println("Dia: " + entry.getKey() + ", Valor: " + entry.getValue());
         }
+
+        // Calcular a soma e a média
+        double soma = 0.0;
+        for (Double valor : listaJsonToHashMap.values()) {
+            soma += valor;
+        }
+
+        double media = soma / listaJsonToHashMap.size();
+
+        System.out.println("Soma dos valores: " + soma);
+        System.out.println("Média dos valores: " + media);
     }
 
     public Map<Integer, Double> jsonToHashMap(JsonNode jsonNodeSize) throws IOException {
