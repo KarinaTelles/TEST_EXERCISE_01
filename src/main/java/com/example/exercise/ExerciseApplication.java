@@ -22,18 +22,13 @@ public class ExerciseApplication {
 		Faturamento exer3 = new Faturamento();
 		exer3.jsonReader();
 		/*##########################################*/
+		/*###############EXERCÍCIO 04###############*/
+		FaturamentoPorEstado exer4 = new FaturamentoPorEstado();
+		exer4.faturamento();
+		/*##########################################*/
 	}
 }
 /*
-4) Dado o valor de faturamento mensal de uma distribuidora, detalhado por estado:
-• SP – R$67.836,43
-• RJ – R$36.678,66
-• MG – R$29.229,88
-• ES – R$27.165,48
-• Outros – R$19.849,53
-
-Escreva um programa na linguagem que desejar onde calcule o percentual de representação que cada estado teve dentro do valor total mensal da distribuidora.
-
 5) Escreva um programa que inverta os caracteres de um string.
 
 IMPORTANTE:
