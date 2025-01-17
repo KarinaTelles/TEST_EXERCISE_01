@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class Faturamento {
     /* Primeiro passo: Ler um arquivo JSON */
-    public void jsonReader() throws IOException {
+    public void leitorDeJson() throws IOException {
         ObjectMapper objectMapperSize = new ObjectMapper();
         JsonNode jsonNodeSize = objectMapperSize.readTree(new File("src/main/java/com/example/exercise/dados.json"));
         System.out.println("IMPRIME O JSON INTEIRO: " + jsonNodeSize);

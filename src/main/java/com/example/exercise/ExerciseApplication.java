@@ -20,7 +20,7 @@ public class ExerciseApplication {
 		/*##########################################*/
 		/*###############EXERCÍCIO 03###############*/
 		Faturamento exer3 = new Faturamento();
-		exer3.jsonReader();
+		exer3.leitorDeJson();
 		/*##########################################*/
 		/*###############EXERCÍCIO 04###############*/
 		FaturamentoPorEstado exer4 = new FaturamentoPorEstado();
