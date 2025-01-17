@@ -11,7 +11,7 @@ public class ExerciseApplication {
 		/*###############EXERCÍCIO 01###############*/
 		Loop exer1 = new Loop();
 		int somaAoFinalDoLoop;
-		somaAoFinalDoLoop = exer1.doLoop();
+		somaAoFinalDoLoop = exer1.fazLoop();
 		System.out.println("VALOR DA VARIÁVEL ''SOMA'' NO FINAL DO PROCESSAMENTO: " + somaAoFinalDoLoop);
 		/*##########################################*/
 		/*###############EXERCÍCIO 02###############*/

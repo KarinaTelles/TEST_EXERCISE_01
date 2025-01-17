@@ -1,12 +1,7 @@
 package com.example.exercise;
 
 public class InverteString {
-    public void fazAInversaoDaString(){
 
-    }
-    public void recebeDoConsoleEFazAInversaoDaString(){
-
-    }
 }
 /*
 5) Escreva um programa que inverta os caracteres de um string.

@@ -1,7 +1,7 @@
 package com.example.exercise;
 
 public class Loop {
-    public int doLoop(){
+    public int fazLoop(){
         int indice = 13;
         int soma = 0;
         int k = 0;
