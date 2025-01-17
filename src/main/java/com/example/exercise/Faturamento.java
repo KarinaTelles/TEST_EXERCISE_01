@@ -33,14 +33,34 @@ public class Faturamento {
 
         // Calcular a soma e a média
         double soma = 0.0;
+        double menorValor = Double.MAX_VALUE;
+        double maiorValor = Double.MIN_VALUE;
+        int diasAcimaDaMedia = 0;
+
         for (Double valor : listaJsonToHashMap.values()) {
             soma += valor;
+            if (valor < menorValor) {
+                menorValor = valor;
+            }
+            if (valor > maiorValor) {
+                maiorValor = valor;
+            }
         }
 
         double media = soma / listaJsonToHashMap.size();
 
+        // Contar dias com faturamento acima da média
+        for (Double valor : listaJsonToHashMap.values()) {
+            if (valor > media) {
+                diasAcimaDaMedia++;
+            }
+        }
+
         System.out.println("Soma dos valores: " + soma);
         System.out.println("Média dos valores: " + media);
+        System.out.println("Menor valor de faturamento: " + menorValor);
+        System.out.println("Maior valor de faturamento: " + maiorValor);
+        System.out.println("Número de dias com faturamento acima da média: " + diasAcimaDaMedia);
     }
 
     public Map<Integer, Double> jsonToHashMap(JsonNode jsonNodeSize) throws IOException {
@@ -53,6 +73,7 @@ public class Faturamento {
         }
         return mapa;
     }
+
 }
 /*
 3) Dado um vetor que guarda o valor de faturamento diário
